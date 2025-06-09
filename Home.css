@@ -1,12 +1,12 @@
 html {
   scroll-behavior: smooth;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
-  background: linear-gradient(to bottom right, #0a0a23, #3a0ca3); 
+  background: linear-gradient(to bottom right, #0a0a23, #3a0ca3);
   color: #fff;
   line-height: 1.5;
 }
@@ -21,20 +21,17 @@ nav {
   z-index: 1000;
 }
 
-/* Container holding hamburger and links */
 .nav-container {
   max-width: 1200px;
   margin: auto;
   padding: 0 1rem;
-
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-  gap: 2rem;              
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
-/* Hamburger button */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -42,7 +39,6 @@ nav {
   cursor: pointer;
 }
 
-/* Nav links container */
 .nav-links {
   list-style: none;
   display: flex;
@@ -54,7 +50,6 @@ nav {
   flex-wrap: wrap;
 }
 
-/* Nav links styles */
 .nav-links li a {
   color: #fff;
   font-weight: 600;
@@ -65,7 +60,6 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* Underline effect on hover */
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -85,7 +79,7 @@ nav {
   width: 100%;
 }
 
-/* Responsive Mobile Menu */
+/* Mobile Menu */
 @media (max-width: 600px) {
   .hamburger {
     display: block;
@@ -105,12 +99,10 @@ nav {
     display: flex;
   }
 
-  /* On mobile, center links */
   .nav-links li a {
     text-align: center;
   }
 }
-
 
 /* Intro Section */
 .intro {
@@ -140,9 +132,7 @@ nav {
 }
 
 .intro .text p {
-  max-width: 100%;
   color: #ccc;
-  line-height: 1.5;
 }
 
 .intro button {
@@ -155,6 +145,8 @@ nav {
   cursor: pointer;
   font-size: 1rem;
 }
+
+/* Typing Effect */
 .typing-text {
   font-size: 2.5rem;
   font-weight: bold;
@@ -166,18 +158,16 @@ nav {
   animation: typing 5s steps(20, end) infinite, blink 0.7s step-end infinite;
 }
 
-/* Typing effect */
 @keyframes typing {
   0% { width: 0; }
   100% { width: 15ch; }
 }
 
-/* Blinking cursor */
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-
+/* Intro Image */
 .image-container {
   flex: 0 1 375px;
   width: 375px;
@@ -203,21 +193,13 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 20px;
 }
 
-/* Floating animation */
 @keyframes floatImage {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
-
-
 
 /* About Section */
 .about-fancy {
@@ -285,12 +267,11 @@ nav {
   color: white;
   user-select: none;
 }
-
-/* Education Section */
+/* Education */
 .education {
   padding: 4rem 2rem;
-  background: radial-gradient(circle at top right, #1e1e40, transparent);
   text-align: center;
+  background: radial-gradient(circle at top right, #1e1e40, transparent);
 }
 
 .education h2 {
@@ -298,7 +279,6 @@ nav {
   background: linear-gradient(to right, #70f3ff, #ff00cc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 2rem;
 }
 
 .education-list {
@@ -313,10 +293,10 @@ nav {
   padding: 1.5rem;
   border-radius: 10px;
   width: 280px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   color: #ccc;
-  transition: transform 0.3s ease;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .edu-card:hover {
@@ -326,7 +306,6 @@ nav {
 
 .edu-card h3 {
   color: #70f3ff;
-  margin-bottom: 0.5rem;
 }
 
 /* Work Section */
@@ -356,9 +335,6 @@ nav {
   padding: 1rem;
   border-radius: 10px;
   width: 300px;
-  text-align: center;
-  flex: 1 1 280px;
-  box-sizing: border-box;
   color: #ccc;
   transition: box-shadow 0.3s ease;
 }
@@ -368,12 +344,7 @@ nav {
 }
 
 .project h3 {
-  margin-top: 0;
   color: #70f3ff;
-}
-
-.project p {
-  color: #ccc;
 }
 
 /* Contact Section */
@@ -438,11 +409,6 @@ nav {
   color: #fff;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.contact-container button:hover {
-  background: linear-gradient(to right, #3333ff, #ff00cc);
 }
 
 /* Footer */
@@ -454,7 +420,7 @@ footer {
   color: #ccc;
 }
 
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 900px) {
   .intro {
     padding: 3rem 1.5rem;
@@ -463,9 +429,6 @@ footer {
     width: 250px;
     height: 250px;
     margin-left: 1rem;
-  }
-  nav ul {
-    justify-content: space-around;
   }
 }
 
@@ -477,16 +440,7 @@ footer {
   .image-container {
     width: 200px;
     height: 200px;
-    margin-left: 0;
-    margin-top: 2rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
-  }
-  nav li {
-    margin: 0;
+    margin: 2rem auto 0;
   }
 }
 
@@ -522,7 +476,5 @@ footer {
   .contact-container .info {
     text-align: center;
   }
-  nav ul li a {
-    font-size: 1.1rem;
-  }
+  
 }
