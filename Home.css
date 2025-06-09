@@ -460,6 +460,30 @@ footer {
   }
 }
 
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li a {
+    text-align: center;
+  }
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 14px;
