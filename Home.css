@@ -1,12 +1,12 @@
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
-  font-size: 16px; /* Base font size */
+  scroll-behavior: smooth;
+  font-size: 16px; 
 }
 
 body {
   margin: 0;
   font-family: 'Outfit', sans-serif;
-  background: linear-gradient(to bottom right, #0a0a23, #3a0ca3); /* Dark gradient background */
+  background: linear-gradient(to bottom right, #0a0a23, #3a0ca3); 
   color: #fff;
   line-height: 1.5;
 }
@@ -21,28 +21,52 @@ nav {
   z-index: 1000;
 }
 
-nav ul {
+/* Container holding hamburger and links */
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 1rem;
-  gap: 2rem;
+  justify-content: center; 
+  align-items: center;    
+  gap: 2rem;              
   flex-wrap: wrap;
 }
 
-nav ul li a {
-  position: relative;
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Nav links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Nav links styles */
+.nav-links li a {
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
   padding: 0.5rem 0;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-nav ul li a::after {
+/* Underline effect on hover */
+.nav-links li a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -53,18 +77,37 @@ nav ul li a::after {
   transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
   color: #ff00cc;
 }
 
-nav ul li a:hover::after {
+.nav-links li a:hover::after {
   width: 100%;
 }
 
+/* Responsive Mobile Menu */
 @media (max-width: 600px) {
-  nav ul {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
     gap: 1rem;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* On mobile, center links */
+  .nav-links li a {
+    text-align: center;
   }
 }
 
@@ -126,7 +169,7 @@ nav ul li a:hover::after {
 /* Typing effect */
 @keyframes typing {
   0% { width: 0; }
-  100% { width: 15ch; } /* Adjust to match the character count of your text */
+  100% { width: 15ch; }
 }
 
 /* Blinking cursor */
