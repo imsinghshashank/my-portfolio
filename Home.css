@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,6 +10,17 @@ body {
   background: linear-gradient(to bottom right, #0a0a23, #3a0ca3);
   color: #fff;
   line-height: 1.5;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* Navigation */
@@ -267,6 +279,7 @@ nav {
   color: white;
   user-select: none;
 }
+
 /* Education */
 .education {
   padding: 4rem 2rem;
@@ -420,15 +433,17 @@ footer {
   color: #ccc;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 900px) {
   .intro {
     padding: 3rem 1.5rem;
   }
+
   .image-container {
     width: 250px;
     height: 250px;
-    margin-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -437,6 +452,7 @@ footer {
     flex-direction: column;
     padding: 3rem 1rem;
   }
+
   .image-container {
     width: 200px;
     height: 200px;
@@ -448,33 +464,40 @@ footer {
   html {
     font-size: 14px;
   }
+
   .intro .text h1 {
     font-size: 2rem;
   }
+
   .intro .text h2 {
     font-size: 1.25rem;
   }
+
   .about-fancy h2,
   .education h2,
   .work h2,
   .contact h2 {
     font-size: 2rem;
   }
+
   .edu-card,
   .project {
     width: 100%;
   }
+
   .education-list,
   .projects {
     flex-direction: column;
     gap: 1.5rem;
   }
+
   .contact-container {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
   }
+
   .contact-container .info {
     text-align: center;
   }
-  
 }
