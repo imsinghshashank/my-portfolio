@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="Home.css">
+
+  <!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <!-- Custom style for social icons -->
+  <style>
+    .social-icons {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #f0f0f0;
+      color: #067eb2;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px #067eb2;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background-color: #067eb2;
+      color: white;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="intro">
+    <div class="text">
+      <h1 class="typing-text">Hi, I'm Shashank</h1>
+      <h2>Software Developer</h2>
+      <p>
+        A dynamic Software Developer dedicated to continuous learning and staying ahead of industry trends. I quickly adapt to new technologies and enjoy collaborating with teams to build efficient and resilient software systems.
+      </p>
+      <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Contact</button>
+    </div>
+    <div class="image-container">
+      <img src="../icons/Shashank.jpg" alt="Profile Picture" />
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-fancy">
+    <h2>About</h2>
+    <p>
+      A Software Developer eager to contribute to an exciting company. My focus lies in building robust applications with a strong foundation in Java, complemented by accessible HTML, modern CSS, and clean JavaScript. I'm also proficient in SQL for data management and can readily adapt to new technologies. I thrive in collaborative team environments and enjoy spending my free time outdoors.
+    </p>
+    <div class="skills-wrapper">
+      <div class="skills-icons">
+        <img src="../icons/react.svg" alt="React" />
+        <img src="../icons/java.png" alt="JAVA" />
+        <img src="../icons/css.png" alt="CSS" />
+        <img src="../icons/javascript.svg" alt="JavaScript" />
+        <img src="../icons/sql.png" alt="SQL" />
+        <img src="../icons/html.png" alt="HTML" />
+        <img src="../icons/hibernate.png" alt="Hibernate" />
+        <img src="../icons/spring.png" alt="Spring" />
+      </div>
+      <div class="orbit-core">
+        <div class="core-icon">Σ</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <div class="education-list">
+      <div class="edu-card">
+        <h3>Bachelor of Engineering</h3>
+        <p>Computer Science Engineering</p>
+        <p>Chandigarh University, 2024</p>
+      </div>
+      <div class="edu-card">
+        <h3>Intermediate</h3>
+        <p>Science Stream</p>
+        <p>M.P College, 2020</p>
+      </div>
+      <div class="edu-card">
+        <h3>Matriculation</h3>
+        <p>CBSE Board</p>
+        <p>S.D.S Senior Secondary School, 2017</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work/Projects Section -->
+  <section id="work" class="work">
+    <h2>Recent Work</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Online Code Compiler</h3>
+        <p>A website that allows you to compile source code and execute it online in many programming languages. Built with HTML, CSS, JavaScript, React, and Node.js.</p>
+      </div>
+      <div class="project">
+        <h3>E-commerce Website</h3>
+        <p>A responsive shopping platform with user authentication, cart system, and admin dashboard. Developed using HTML, CSS, JavaScript, and MySQL.</p>
+      </div>
+      <div class="project">
+        <h3>PG Life Website</h3>
+        <p>A room-rental website for students and working professionals. Allows PG listings, search by city, and booking interface. Built with HTML, CSS, JavaScript, and MySQL.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <div class="contact-container">
+
+      <!-- Contact Info -->
+      <div class="info">
+        <p>Email: shashank@gmail.com</p>
+        <p>Phone: +91 8873492683</p>
+        <p>Location: Bihar, India</p>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://www.instagram.com/imsinghshashank/?hl=en" target="_blank">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.facebook.com/shashank.singh.550197/" target="_blank">
+            <i class="fab fa-facebook fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/shashank-singh-1b2484217/" target="_blank">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" name="from_name" placeholder="Your Name" required />
+        <input type="email" name="from_email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Shashank. All rights reserved.</p>
+  </footer>
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- EmailJS Configuration -->
+  <script>
+    (function() {
+      emailjs.init("xYOxQmx2ZGGFuv5qy"); // Replace with your actual User ID from EmailJS dashboard
+    })();
+
+    function sendEmail(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const form = event.target;
+
+      emailjs.sendForm('service_yf43ge7', 'template_v63wpel', form)
+        .then(() => {
+          alert('✅ Message sent successfully!');
+          form.reset();
+        }, (error) => {
+          alert('❌ Failed to send message. Please try again.');
+          console.error('EmailJS Error:', error);
+        });
+    }
+  </script>
+
+</body>
+</html>
