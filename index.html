@@ -46,14 +46,18 @@
 
   <!-- Navigation Menu -->
   <nav>
-    <ul>
+  <div class="nav-container">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#work">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Home Section -->
   <section id="home" class="intro">
@@ -66,7 +70,7 @@
       <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Contact</button>
     </div>
     <div class="image-container">
-      <img src="Shashank.jpg" alt="Profile Picture" />
+      <img src="../icons/Shashank.jpg" alt="Profile Picture" />
     </div>
   </section>
 
@@ -78,14 +82,14 @@
     </p>
     <div class="skills-wrapper">
       <div class="skills-icons">
-        <img src="react.svg" alt="React" />
-        <img src="java.png" alt="JAVA" />
-        <img src="css.png" alt="CSS" />
-        <img src="javascript.svg" alt="JavaScript" />
-        <img src="sql.png" alt="SQL" />
-        <img src="html.png" alt="HTML" />
-        <img src="hibernate.png" alt="Hibernate" />
-        <img src="spring.png" alt="Spring" />
+        <img src="../icons/react.svg" alt="React" />
+        <img src="../icons/java.png" alt="JAVA" />
+        <img src="../icons/css.png" alt="CSS" />
+        <img src="../icons/javascript.svg" alt="JavaScript" />
+        <img src="../icons/sql.png" alt="SQL" />
+        <img src="../icons/html.png" alt="HTML" />
+        <img src="../icons/hibernate.png" alt="Hibernate" />
+        <img src="../icons/spring.png" alt="Spring" />
       </div>
       <div class="orbit-core">
         <div class="core-icon">Σ</div>
@@ -197,7 +201,12 @@
           alert('❌ Failed to send message. Please try again.');
           console.error('EmailJS Error:', error);
         });
-    }
+      }
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('show');
+  }
+
   </script>
 
 </body>
